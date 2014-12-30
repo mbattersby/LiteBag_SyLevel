@@ -1,0 +1,6 @@
+## Interface: 60000
+## Title: LiteBag_SyLevel
+## Version: 0
+## Dependencies: LiteBag, SyLevel
+
+LiteBag_SyLevel.lua
