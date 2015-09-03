@@ -1,6 +1,14 @@
---
--- You're on your own with this one.
---
+--[[----------------------------------------------------------------------------
+
+  LiteBag_SyLevel/LiteBag_SyLevel.lua.lua
+
+  Copyright 2015 Mike Battersby
+
+  Released under the terms of the GNU General Public License version 2 (GPLv2).
+  See the file LICENSE.txt.
+
+----------------------------------------------------------------------------]]--
+
 local myName = ...
 
 local _E
@@ -27,6 +35,8 @@ local function AddonLoaded(self, event, addonName)
                          '|cff00ff00Addon:|r LiteBag')
     SyLevel:RegisterAllPipesAndFilters()
     hooksecurefunc('LiteBagItemButton_Update', LiteBagButton_UpdateSyLevel)
+    self:UnregisterEvent("ADDON_LOADED")
+    self:SetScript("OnEvent", nil)
 end
 
 local f = CreateFrame("Frame")

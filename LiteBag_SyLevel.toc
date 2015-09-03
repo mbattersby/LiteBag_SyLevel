@@ -1,6 +1,8 @@
-## Interface: 60000
+## Interface: 60200
 ## Title: LiteBag_SyLevel
-## Version: 0
+## Version: @project-version@
+## Author: Xodiv of Nagrand
+## Email: mib@post.com
 ## Dependencies: LiteBag, SyLevel
 
 LiteBag_SyLevel.lua
