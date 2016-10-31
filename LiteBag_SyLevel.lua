@@ -17,9 +17,14 @@ local function enable () _E = true end
 
 local function disable () _E = false end
 
+local LITEBAG_PANELS = { LiteBagBankPanel, LiteBagInventoryPanel }
+
 local function update ()
-    LiteBagFrame_Update(LiteBagInventory)
-    LiteBagFrame_Update(LiteBagBank)
+    for _,p in ipairs(LITEBAG_PANELS) do
+        if p and p:IsShown() then
+            LiteBagPanel_UpdateItemButtons(p)
+        end
+    end
 end
 
 function LiteBagButton_UpdateSyLevel(button)
